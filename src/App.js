@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import CookbookInfo from "./bricks/CookbookInfo";
+import RecipeList from "./bricks/RecipeList";
+import "bootstrap/dist/css/bootstrap.min.css";
+import recipeList from "./MyRecipes";
+
+const cookbook = {
+  name: "Najlepšie jedlo",
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header">
+        <CookbookInfo cookbook={cookbook} />
+      </div>
+      <div className="grid">
+        <RecipeList recipeList={recipeList} />
+      </div>
     </div>
   );
 }
