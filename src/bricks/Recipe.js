@@ -20,6 +20,9 @@ function Recipe(props) {
         <Card.Text className={styles.cardText}>
           {isGrid ? <p className="text-truncate">{text}</p> : <p>{text}</p>}
         </Card.Text>
+        <ul>
+          <li>{props.recipe.name}</li>
+        </ul>
         <div className="container-fluid">
           <Button
             variant="outline-primary"

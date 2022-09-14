@@ -11,6 +11,9 @@ import { mdiTable, mdiViewGridOutline } from "@mdi/js";
 function RecipeList(props) {
   const [viewType, setViewType] = useState("grid");
   const isGrid = viewType === "grid";
+  const ingredientList = props.ingredientList;
+
+  console.log(ingredientList);
 
   return (
     <div>
@@ -32,7 +35,10 @@ function RecipeList(props) {
         </div>
       </Navbar>
       {isGrid ? (
-        <RecipeGridList recipeList={props.recipeList} />
+        <RecipeGridList
+          recipeList={props.recipeList}
+          ingredientList={ingredientList}
+        />
       ) : (
         <RecipeTableList recipeList={props.recipeList} />
       )}
