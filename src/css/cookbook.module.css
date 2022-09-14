@@ -4,8 +4,3 @@
   padding: 4px 12px;
   border-radius: 8px;
 }
-
-.cardText {
-  max-height: 198px;
-  overflow-y: hidden;
-}
